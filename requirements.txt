@@ -1,0 +1,20 @@
+# Görüntü İşleme API'si — çalışma bağımlılıkları
+# Önerilen Python: 3.10 – 3.12  (torch/ultralytics tekerlekleri için)
+
+# Web sunucusu
+fastapi>=0.115
+uvicorn>=0.30
+httpx>=0.27              # Supabase REST istemcisi
+
+# Görüntü işleme / YOLO
+ultralytics>=8.3         # YOLO + izleme (torch otomatik gelir)
+supervision>=0.27        # Alan (PolygonZone) ve çizim yardımcıları
+opencv-python>=4.9
+numpy>=1.26
+Pillow>=10.0             # Türkçe karakterli yazı çizimi
+
+# CPU'da hızlandırma (Modeller sayfasındaki "OpenVINO'ya dönüştür" için)
+openvino>=2024.0
+onnx>=1.16
+
+# İsteğe bağlı: NVIDIA GPU için torch'un CUDA sürümünü https://pytorch.org adresindeki komutla kurun.
